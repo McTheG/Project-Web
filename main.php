@@ -26,6 +26,7 @@ $link = "";
 foreach ($jsonRS["data"] as $rs) 
 {
 ?>	
+
 	<table border="1" class ="table">
 	<tr>
 		<td width="40px"><?php echo $rs["id"]?></td>
@@ -38,13 +39,11 @@ foreach ($jsonRS["data"] as $rs)
 		<td width="70px"><?php echo $rs["status"]?></td>
 	
 	<?php
-		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";
-		
-		
+		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
 	?>
 	<ul class="nav nav-tabs">
     <li role="presentation">
-        <td width="100px"><a href="https://www.google.be/maps/place//@51.22803731348400,4.43136310528900,17z/">Google Maar!</a></td>
+        <td width="100px"><a href="<?php echo $link; ?>">Google Map</a></td>
     </li>
     
     </ul>
