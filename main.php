@@ -7,8 +7,9 @@ include("/nav.php");
 $string = file_get_contents("http://datasets.antwerpen.be/v4/gis/bbq.json");
 $jsonRS = json_decode ($string,true);
 $locatie = "";
+$link = "";
 ?>
-	<table border="5">
+	<table border="5" class ="table">
 	<tr>
 		<td width="40px"><strong><?php echo "ID"?></td>
 		<td width="70px"><strong><?php echo "Objectid"?></td>
@@ -18,14 +19,14 @@ $locatie = "";
 		<td width="40px"><strong><?php echo "O_id"?></td>
 		<td width="150px"><strong><?php echo "Ligging"?></td>
 		<td width="70px"><strong><?php echo "Status"?></td>
+		<td width="100px"><strong><?php echo "Link"?></td>
 	</tr>
-	</table>
 <?php
 
 foreach ($jsonRS["data"] as $rs) 
 {
 ?>	
-	<table border="1">
+	<table border="1" class ="table">
 	<tr>
 		<td width="40px"><?php echo $rs["id"]?></td>
 		<td width="70px"><?php echo $rs["objectid"]?></td>
@@ -35,13 +36,26 @@ foreach ($jsonRS["data"] as $rs)
 		<td width="40px"><?php echo $rs["o_id"]?></td>
 		<td width="150px"><?php echo $rs["ligging"]?></td>
 		<td width="70px"><?php echo $rs["status"]?></td>
+	
+	<?php
+		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";
+		
+		
+	?>
+	<ul class="nav nav-tabs">
+    <li role="presentation">
+        <td width="100px"><a href="https://www.google.be/maps/place//@51.22803731348400,4.43136310528900,17z/">Google Maar!</a></td>
+    </li>
+    
+    </ul>
 		
 	</tr>
-	</table>
-	
+	</table>	
 <?php
 }
-?> 
+
+?>
+		
 
 <!DOCTYPE HTML>
 <html>
