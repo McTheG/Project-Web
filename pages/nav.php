@@ -17,7 +17,7 @@ ini_set( "display_errors", 1 );
 
 <ul class="nav navbar-nav">
 <li><a href="index.php" role="button">Home</a></li>
-<li><a href="main.php" role="button">Locaties</a></li>
+<li><a href="main.php" role="button">Locations</a></li>
 </ul>
 
 <form class="navbar-form navbar-left" role="search" action="https://www.google.be/#">

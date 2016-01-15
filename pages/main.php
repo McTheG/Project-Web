@@ -57,11 +57,13 @@ Locatie:
 </div>
 </div>
     
-<?php
+    <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><?php
 	echo "<h3>Gekozen filtering: $locatie</h3>";
-?></div>
-<div class="panel panel-default">
-<div class="panel-body">
+?></h3>
+  </div>
+  <div class="panel-body">
 <table class="table table-bordered table-responsive">
 <tr>
     <td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
@@ -86,12 +88,12 @@ foreach ($jsonRS["data"] as $rs)
 ?>	
 
 <tr>
-	<td><?php echo $rs["objectid"]?></td>
-	<td><?php echo $rs["point_lat"]?></td>
-	<td><?php echo $rs["point_lng"]?></td>
-	<td><?php echo $rs["obj_type"]?></td>
-	<td><?php echo $rs["ligging"]?></td>
-	<td><?php echo $rs["status"]?></td>
+	<td class="label label-default"><?php echo $rs["objectid"]?></td>
+	<td class="label label-default"><?php echo $rs["point_lat"]?></td>
+	<td class="label label-default"><?php echo $rs["point_lng"]?></td>
+	<td class="label label-default"><?php echo $rs["obj_type"]?></td>
+	<td class="label label-default"><?php echo $rs["ligging"]?></td>
+	<td class="label label-default"><?php echo $rs["status"]?></td>
 	
 	<?php
 		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
@@ -106,18 +108,18 @@ foreach ($jsonRS["data"] as $rs)
 	{
 ?>
 <tr>
-		<td><?php echo $rs["objectid"]?></td>
-		<td><?php echo $rs["point_lat"]?></td>
-		<td><?php echo $rs["point_lng"]?></td>
-		<td><?php echo $rs["obj_type"]?></td>
-		<td><?php echo $rs["ligging"]?></td>
-		<td><?php echo $rs["status"]?></td>
+		<td class="label label-default"><?php echo $rs["objectid"]?></td>
+		<td class="label label-default"><?php echo $rs["point_lat"]?></td>
+		<td class="label label-default" ><?php echo $rs["point_lng"]?></td>
+		<td class="label label-default"><?php echo $rs["obj_type"]?></td>
+		<td class="label label-default"><?php echo $rs["ligging"]?></td>
+		<td class="label label-default"><?php echo $rs["status"]?></td>
 
 	<?php
 		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
 	?>
 	
-	<td><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
+	<td class="label label-default"><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
 </tr>
 		
 	<?php
