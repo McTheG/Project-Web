@@ -3,6 +3,7 @@ error_reporting( E_ALL );
 ini_set( "display_errors", 1 );   
 
 ?>
+
 <html>
 <header>
 <title>Barbecue Map</title>
@@ -17,7 +18,7 @@ ini_set( "display_errors", 1 );
 
 <ul class="nav navbar-nav">
 <li><a href="index.php" role="button">Home</a></li>
-<li><a href="main.php" role="button">Locations</a></li>
+<li><a href="locations.php" role="button">Locations</a></li>
 </ul>
 
 <form class="navbar-form navbar-left" role="search" action="https://www.google.be/#">
@@ -31,6 +32,7 @@ ini_set( "display_errors", 1 );
 </nav>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 

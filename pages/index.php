@@ -8,7 +8,6 @@ include("nav.php");
 <!doctype html>
 <html ng-app>
 <head>
-<script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -24,7 +23,7 @@ include("nav.php");
 </div>
 <h2>Welcome to Barbecue Map</h2>
 <p>This website can help you find public places in Antwerp,<br>where you can have your own Barbecue party.</p>
-<p><a class="btn btn-info btn-lg" href="main.php" role="button">Find one</a></p>
+<p><a class="btn btn-info btn-lg" href="locations.php" role="button">Find one</a></p>
 
 </div>
 </div>
