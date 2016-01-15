@@ -22,7 +22,7 @@ $link = "";
 
 
 <?php	
-$locatie = "NONE";
+$locatie = "ALLE";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
@@ -46,13 +46,13 @@ return $data;
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title"><?php
-echo "<h4>Chosen Place: $locatie</h4>";?>
+echo "<h4>Gekozen publieke plaats: $locatie</h4>";?>
 
-<h3>Public Place:
+<h3>Soorten publieke plaatsen:
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="PARK">PARK</button>
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="GROENZONE">GROENZONE</button>
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="PLEIN">PLEIN</button>
-<button name="locatie" class = "btn btn-success btn-sm" type="submit" value="NONE">Show All</button>
+<button name="locatie" class = "btn btn-success btn-sm" type="submit" value="ALLE">ZIE ALLE</button>
 </h4></h4>
 
 </form>   
@@ -77,7 +77,7 @@ echo "<h4>Chosen Place: $locatie</h4>";?>
 <?php
 foreach ($jsonRS["data"] as $rs) 
 {
-if($locatie != "NONE")
+if($locatie != "ALLE")
 {	
 if($rs["ligging"] == $locatie)
 {		
