@@ -1,8 +1,5 @@
 
 <?php
-error_reporting( E_ALL ); 
-ini_set( "display_errors", 1 );   
-
 include("nav.php");
 
 $string = file_get_contents("http://datasets.antwerpen.be/v4/gis/bbq.json");
