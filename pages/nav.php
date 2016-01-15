@@ -15,14 +15,14 @@ ini_set( "display_errors", 1 );
 <ul class="nav navbar-nav nav-tabs">
 <li><a href="index.php">Home</a></li>
 <li><a href="main.php">Locaties</a></li>
-<!--        <li><a href="https://www.google.com">Google</a></li>-->
 </ul>
 
-<form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left" role="search" action="https://www.google.be/#">
 <div class="form-group">
-<input type="text" class="form-control" placeholder="Search">
+<input type="text" name="q" class="form-control" placeholder="Search">
+
 </div>
-<button type="submit" class="btn btn-default">Google Search</button>
+<input type="submit" value="Google Search" class="btn btn-default"/></td>
 </form>
 
 </nav>
