@@ -7,7 +7,7 @@ ini_set( "display_errors", 1 );
 <html>
 <header>
 <title>Barbecue Map</title>
-<link rel="stylesheet" href="../bootstrap/css/reset.css" type="text/css">
+<link rel="stylesheet" href="../reset.css" type="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
 </header>
