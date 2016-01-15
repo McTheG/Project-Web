@@ -5,7 +5,7 @@ ini_set( "display_errors", 1 );
 
 include("nav.php");
 
-$string = file_get_contents("../bbq.json");
+$string = file_get_contents("http://datasets.antwerpen.be/v4/gis/bbq.json");
 $jsonRS = json_decode ($string,true);
 $locatie = "";
 $link = "";
@@ -40,10 +40,6 @@ return $data;
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-
-
-
 <div class="panel panel-default">
 <div class="panel-heading">
 Locatie:
@@ -51,19 +47,12 @@ Locatie:
 	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GROENZONE") echo "checked";?>  value="GROENZONE">Groenzone
 	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PLEIN") echo "checked";?>  value="PLEIN">Plein
 	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GEEN") echo "checked";?>  value="GEEN">Geen
-</div>
-    
-  
-    
-<div class="panel-body">
-	<input class = "btn btn-default" type="submit" name="submit" value="Filter">
-</div>
-</div>
 
+	
+    <br><input class = "btn btn-default" type="submit" name="submit" value="Filter">
 
-<div class="panel panel-default">
-<div class="panel-heading"><?php
-	echo "<h2>Gekozen filtering: $locatie</h2>";
+<?php
+	echo "<h3>Gekozen filtering: $locatie</h3>";
 ?></div>
 <div class="panel panel-default">
 <div class="panel-body">
@@ -82,7 +71,6 @@ Locatie:
 </div>
 
 <?php
-	echo $locatie;
 foreach ($jsonRS["data"] as $rs) 
 {
 	if($locatie != "GEEN")

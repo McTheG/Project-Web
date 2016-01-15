@@ -1088,7 +1088,6 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
   color: #333;
   background-color: #fff;
 }
@@ -2258,8 +2257,7 @@ table {
   text-align: center;
 }
 caption {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 3px;
   color: #777;
   text-align: left;
 }
@@ -2276,7 +2274,7 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 3px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
@@ -2558,7 +2556,6 @@ output {
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857143;
   color: #555;
   background-color: #fff;
   background-image: none;
