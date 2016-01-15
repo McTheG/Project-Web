@@ -60,8 +60,6 @@ echo "<h4>Gekozen publieke plaats: $locatie</h4>";?>
 <table class="table table-bordered table-responsive">
 <tr>
 <td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
-<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
-<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
 <td class="label label-primary"><strong><?php echo "Obj_type"?></td>
 <td class="label label-primary"><strong><?php echo "Ligging"?></td>
 <td class="label label-primary"><strong><?php echo "Status"?></td>
@@ -82,8 +80,6 @@ if($rs["ligging"] == $locatie)
 
 <tr>
 <td class="label label-default"><?php echo $rs["objectid"]?></td>
-<td class="label label-default"><?php echo $rs["point_lat"]?></td>
-<td class="label label-default"><?php echo $rs["point_lng"]?></td>
 <td class="label label-default"><?php echo $rs["obj_type"]?></td>
 <td class="label label-default"><?php echo $rs["ligging"]?></td>
 <td class="label label-default"><?php echo $rs["status"]?></td>
@@ -102,8 +98,6 @@ else
 ?>
 <tr>
 <td class="label label-default"><?php echo $rs["objectid"]?></td>
-<td class="label label-default"><?php echo $rs["point_lat"]?></td>
-<td class="label label-default"><?php echo $rs["point_lng"]?></td>
 <td class="label label-default"><?php echo $rs["obj_type"]?></td>
 <td class="label label-default"><?php echo $rs["ligging"]?></td>
 <td class="label label-default"><?php echo $rs["status"]?></td>

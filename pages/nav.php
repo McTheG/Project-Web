@@ -21,12 +21,16 @@ ini_set( "display_errors", 1 );
 <li><a href="locations.php" role="button">Locations</a></li>
 </ul>
 
-<form class="navbar-form navbar-left" role="search" action="https://www.google.be/#">
+<script language="JavaScript" type="text/javascript">
+function search_google(){ 
+window.open("http://www.google.com/search?q="+document.search.query.value); 
+}
+</script>
+<form name="search" class="navbar-form navbar-left">
 <div class="form-group">
-<input type="text" name="q" class="form-control" placeholder="Search">
-
+	<input type="text" name="query" value="" class="form-control">
 </div>
-<input type="submit" value="Google Search" class="btn btn-warning"/></td>
+	<input type="submit" value="Search Google" class="btn btn-warning" onClick="search_google()">
 </form>
 
 </nav>
