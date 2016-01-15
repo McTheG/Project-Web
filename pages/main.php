@@ -5,7 +5,7 @@ ini_set( "display_errors", 1 );
 
 include("nav.php");
 
-$string = file_get_contents("../bbq.json");
+$string = file_get_contents("http://datasets.antwerpen.be/v4/gis/bbq.json");
 $jsonRS = json_decode ($string,true);
 $locatie = "";
 $link = "";
@@ -19,45 +19,7 @@ $link = "";
 </head>
 <body>
 
-<<<<<<< HEAD
-<div class="panel panel-default">
-<div class="panel-body">
-<table class="table table-bordered table-responsive">
-<tr>
-	<td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
-	<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
-	<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
-	<td class="label label-primary"><strong><?php echo "Obj_type"?></td>
-	<td class="label label-primary"><strong><?php echo "Ligging"?></td>
-	<td class="label label-primary"><strong><?php echo "Status"?></td>
-	<td class="label label-primary"><strong><?php echo "Link"?></td>
-</tr>
 
-<?php
-foreach ($jsonRS["data"] as $rs) {
-?>
-<tr>
-	<td><?php echo $rs["objectid"]?></td>
-	<td><?php echo $rs["point_lat"]?></td>
-	<td><?php echo $rs["point_lng"]?></td>
-	<td><?php echo $rs["obj_type"]?></td>
-	<td><?php echo $rs["ligging"]?></td>
-	<td><?php echo $rs["status"]?></td>
-<?php
-$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
-?>
-<td><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
-</tr>
-
-<?php
-}
-?>
-
-</table>
-</div>
-</div>  
-=======
->>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 
 <?php	
 $locatie = "GEEN";
@@ -79,10 +41,6 @@ return $data;
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-
-
-
 <div class="panel panel-default">
 <div class="panel-heading">
 Locatie:
@@ -95,24 +53,17 @@ Locatie:
   
     
 <div class="panel-body">
-<<<<<<< HEAD
 <input class = "btn btn-success" type="submit" name="submit" value="Filter">
-=======
-	<input class = "btn btn-default" type="submit" name="submit" value="Filter">
->>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 </div>
 </div>
-
-
-<div class="panel panel-default">
-<div class="panel-heading"><?php
-	echo "<h2>Gekozen filtering: $locatie</h2>";
+    
+<?php
+	echo "<h3>Gekozen filtering: $locatie</h3>";
 ?></div>
 <div class="panel panel-default">
 <div class="panel-body">
 <table class="table table-bordered table-responsive">
 <tr>
-<<<<<<< HEAD
     <td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
 	<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
 	<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
@@ -120,22 +71,12 @@ Locatie:
 	<td class="label label-primary"><strong><?php echo "Ligging"?></td>
 	<td class="label label-primary"><strong><?php echo "Status"?></td>
 	<td class="label label-primary"><strong><?php echo "Link"?></td>
-=======
-	<td><strong><?php echo "BBQ Nr"?></td>
-	<td><strong><?php echo "Point_lat"?></td>
-	<td><strong><?php echo "point_lng"?></td>
-	<td><strong><?php echo "Obj_type"?></td>
-	<td><strong><?php echo "Ligging"?></td>
-	<td><strong><?php echo "Status"?></td>
-	<td><strong><?php echo "Link"?></td>
->>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 </tr>
 
 </div>
 </div>
 
 <?php
-	echo $locatie;
 foreach ($jsonRS["data"] as $rs) 
 {
 	if($locatie != "GEEN")

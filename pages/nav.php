@@ -6,7 +6,9 @@ ini_set( "display_errors", 1 );
 <html>
 <header>
 <title>Barbecue Map</title>
+<link rel="stylesheet" href="../bootstrap/css/reset.css" type="text/css">
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    
 </header>
 <body>
 

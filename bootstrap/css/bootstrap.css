@@ -187,10 +187,6 @@ td,
 th {
   padding: 0;
 }
-div {
-  margin-left: 10px;
-
-}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -2255,7 +2251,6 @@ pre code {
 }
 table {
   background-color: transparent;
-  text-align: center;
 }
 caption {
   padding-top: 8px;
@@ -2267,9 +2262,10 @@ th {
   text-align: left;
 }
 .table {
+  width: 100%;
   max-width: 100%;
+  margin-bottom: 20px;
 }
-
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
