@@ -25,7 +25,7 @@ ini_set( "display_errors", 1 );
 <input type="text" name="q" class="form-control" placeholder="Search">
 
 </div>
-<input type="submit" value="Google Search" class="btn btn-default"/></td>
+<input type="submit" value="Google Search" class="btn btn-warning"/></td>
 </form>
 
 </nav>
