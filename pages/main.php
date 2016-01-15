@@ -43,13 +43,11 @@ return $data;
 <div class="panel panel-default">
 <div class="panel-heading">
 Locatie:
-	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PARK") echo "checked";?>  value="PARK">Park
-	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GROENZONE") echo "checked";?>  value="GROENZONE">Groenzone
-	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PLEIN") echo "checked";?>  value="PLEIN">Plein
-	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GEEN") echo "checked";?>  value="GEEN">Geen
-
-	
-    <br><input class = "btn btn-default" type="submit" name="submit" value="Filter">
+  <button name="locatie" type="submit" value="PARK">PARK</button>
+  <button name="locatie" type="submit" value="GROENZONE">GROENZONE</button>
+  <button name="locatie" type="submit" value="PLEIN">PLEIN</button>
+  <button name="locatie" type="submit" value="GEEN">GEEN</button>
+  </form> 
 
 <?php
 	echo "<h3>Gekozen filtering: $locatie</h3>";
