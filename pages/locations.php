@@ -43,9 +43,9 @@ return $data;
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title"><?php
-echo "<h4>Gekozen publieke plaats: $locatie</h4>";?>
+echo "<h4>Gekozen ligging: $locatie</h4>";?>
 
-<h3>Soorten publieke plaatsen:
+<h3>Ligging:
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="PARK">PARK</button>
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="GROENZONE">GROENZONE</button>
 <button name="locatie" class = "btn btn-success btn-sm" type="submit" value="PLEIN">PLEIN</button>
