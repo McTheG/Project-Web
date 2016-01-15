@@ -19,6 +19,7 @@ $link = "";
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="panel panel-default">
 <div class="panel-body">
 <table class="table table-bordered table-responsive">
@@ -55,9 +56,11 @@ $link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_ln
 </table>
 </div>
 </div>  
+=======
+>>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 
 <?php	
-$locatie = "";
+$locatie = "GEEN";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
@@ -83,28 +86,33 @@ return $data;
 <div class="panel panel-default">
 <div class="panel-heading">
 Locatie:
-<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PARK") echo "checked";?>  value="PARK">Park
-<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GROENZONE") echo "checked";?>  value="GROENZONE">Groenzone
-<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PLEIN") echo "checked";?>  value="PLEIN">Plein
+	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PARK") echo "checked";?>  value="PARK">Park
+	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GROENZONE") echo "checked";?>  value="GROENZONE">Groenzone
+	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="PLEIN") echo "checked";?>  value="PLEIN">Plein
+	<input type="radio" name="locatie" <?php if (isset($locatie) && $locatie=="GEEN") echo "checked";?>  value="GEEN">Geen
 </div>
     
   
     
 <div class="panel-body">
+<<<<<<< HEAD
 <input class = "btn btn-success" type="submit" name="submit" value="Filter">
+=======
+	<input class = "btn btn-default" type="submit" name="submit" value="Filter">
+>>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 </div>
 </div>
 
 
 <div class="panel panel-default">
 <div class="panel-heading"><?php
-echo "<h2>Gekozen filtering: $locatie</h2>";
+	echo "<h2>Gekozen filtering: $locatie</h2>";
 ?></div>
+<div class="panel panel-default">
 <div class="panel-body">
-
-
 <table class="table table-bordered table-responsive">
 <tr>
+<<<<<<< HEAD
     <td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
 	<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
 	<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
@@ -112,39 +120,67 @@ echo "<h2>Gekozen filtering: $locatie</h2>";
 	<td class="label label-primary"><strong><?php echo "Ligging"?></td>
 	<td class="label label-primary"><strong><?php echo "Status"?></td>
 	<td class="label label-primary"><strong><?php echo "Link"?></td>
+=======
+	<td><strong><?php echo "BBQ Nr"?></td>
+	<td><strong><?php echo "Point_lat"?></td>
+	<td><strong><?php echo "point_lng"?></td>
+	<td><strong><?php echo "Obj_type"?></td>
+	<td><strong><?php echo "Ligging"?></td>
+	<td><strong><?php echo "Status"?></td>
+	<td><strong><?php echo "Link"?></td>
+>>>>>>> 0386a7d2ce351022e0dde81e38e226f93d71bc0f
 </tr>
 
-
+</div>
+</div>
 
 <?php
-if($locatie != null)
-{
-
-
+	echo $locatie;
 foreach ($jsonRS["data"] as $rs) 
 {
-if($rs["ligging"] == $locatie)
-{
+	if($locatie != "GEEN")
+	{	
+		if($rs["ligging"] == $locatie)
+		{		
 ?>	
 
 <tr>
-<td><?php echo $rs["objectid"]?></td>
-<td><?php echo $rs["point_lat"]?></td>
-<td><?php echo $rs["point_lng"]?></td>
-<td><?php echo $rs["obj_type"]?></td>
-<td><?php echo $rs["ligging"]?></td>
-<td><?php echo $rs["status"]?></td>
-<?php
-$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
-?>
-<td><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
+	<td><?php echo $rs["objectid"]?></td>
+	<td><?php echo $rs["point_lat"]?></td>
+	<td><?php echo $rs["point_lng"]?></td>
+	<td><?php echo $rs["obj_type"]?></td>
+	<td><?php echo $rs["ligging"]?></td>
+	<td><?php echo $rs["status"]?></td>
+	
+	<?php
+		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
+	?>
+	
+	<td><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
 </tr>
 <?php
-}
-else
-{
-}	
-} 
+		}
+	}
+	else
+	{
+?>
+<tr>
+		<td><?php echo $rs["objectid"]?></td>
+		<td><?php echo $rs["point_lat"]?></td>
+		<td><?php echo $rs["point_lng"]?></td>
+		<td><?php echo $rs["obj_type"]?></td>
+		<td><?php echo $rs["ligging"]?></td>
+		<td><?php echo $rs["status"]?></td>
+
+	<?php
+		$link = "https://www.google.be/maps/place//@".$rs["point_lat"].",".$rs["point_lng"].",17z/";	
+	?>
+	
+	<td><a class = "btn btn-default" href="<?php echo $link; ?>">Google Maps</a></td>
+</tr>
+		
+	<?php
+	}
 }
 ?>
 </table>
