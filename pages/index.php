@@ -8,23 +8,27 @@ include("nav.php");
 
 <!doctype html>
 <html ng-app>
-  <head><br>
-    <script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
-  </head>
-  <body>
-    <div ng-style={background:'red'}>
-</BR>
-</BR>
-</BR>
-</BR>
-</BR>
-<Center>
-    <h1>Welkom bij de BBQ app!</h1></center>
-</BR>
-</BR>
-</BR>
-</BR>
-</BR>
+<head>
+<script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
+</head>
+<body>
+<di class="container">
+<div class="jumbotron" >
+
+    <h1>Barbecue Map</h1>
+
+    <div class="row">
+  <div class="col-xs-6 col-md-4">
+    <a href="#" class="thumbnail">
+      <img src="../images/meat1.jpg" alt="meat1">
+    </a>
+  </div>
+  <h2>Welcome to Barbecue Map</h2>
+          <p>This website can help you find public places in Antwerp,<br>where you can have your own Barbecue party.</p>
+        <p><a class="btn btn-info btn-lg" href="main.php" role="button">Find one</a></p>
+      
 </div>
-  </body><hr>
+</div>
+
+</body>
 </html>

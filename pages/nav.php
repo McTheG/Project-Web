@@ -5,16 +5,16 @@ ini_set( "display_errors", 1 );
 ?>
 <html>
 <header>
-<title>Barbecue</title>
+<title>Barbecue Map</title>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
 </header>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar nav-pills">
 
-<ul class="nav navbar-nav nav-tabs">
-<li><a href="index.php">Home</a></li>
-<li><a href="main.php">Locaties</a></li>
+<ul class="nav navbar-nav">
+<li><a href="index.php" role="button">Home</a></li>
+<li><a href="main.php" role="button">Locaties</a></li>
 <!--        <li><a href="https://www.google.com">Google</a></li>-->
 </ul>
 

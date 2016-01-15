@@ -23,13 +23,13 @@ $link = "";
 <div class="panel-body">
 <table class="table table-bordered table-responsive">
 <tr>
-	<td><strong><?php echo "BBQ Nr"?></td>
-	<td><strong><?php echo "Point_lat"?></td>
-	<td><strong><?php echo "point_lng"?></td>
-	<td><strong><?php echo "Obj_type"?></td>
-	<td><strong><?php echo "Ligging"?></td>
-	<td><strong><?php echo "Status"?></td>
-	<td><strong><?php echo "Link"?></td>
+	<td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
+	<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
+	<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
+	<td class="label label-primary"><strong><?php echo "Obj_type"?></td>
+	<td class="label label-primary"><strong><?php echo "Ligging"?></td>
+	<td class="label label-primary"><strong><?php echo "Status"?></td>
+	<td class="label label-primary"><strong><?php echo "Link"?></td>
 </tr>
 
 <?php
@@ -91,7 +91,7 @@ Locatie:
   
     
 <div class="panel-body">
-<input class = "btn btn-default" type="submit" name="submit" value="Filter">
+<input class = "btn btn-success" type="submit" name="submit" value="Filter">
 </div>
 </div>
 
@@ -105,13 +105,13 @@ echo "<h2>Gekozen filtering: $locatie</h2>";
 
 <table class="table table-bordered table-responsive">
 <tr>
-<td><strong><?php echo "BBQ Nr"?></td>
-<td><strong><?php echo "Point_lat"?></td>
-<td><strong><?php echo "point_lng"?></td>
-<td><strong><?php echo "Obj_type"?></td>
-<td><strong><?php echo "Ligging"?></td>
-<td><strong><?php echo "Status"?></td>
-<td><strong><?php echo "Link"?></td>
+    <td class="label label-primary"><strong><?php echo "BBQ Nr"?></td>
+	<td class="label label-primary"><strong><?php echo "Point_lat"?></td>
+	<td class="label label-primary"><strong><?php echo "Point_lng"?></td>
+	<td class="label label-primary"><strong><?php echo "Obj_type"?></td>
+	<td class="label label-primary"><strong><?php echo "Ligging"?></td>
+	<td class="label label-primary"><strong><?php echo "Status"?></td>
+	<td class="label label-primary"><strong><?php echo "Link"?></td>
 </tr>
 
 
