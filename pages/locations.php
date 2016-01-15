@@ -1,12 +1,26 @@
+<script type="text/javascript" src="webserver.js"></script>
+
+<script type="text/javascript">
+
+function callUrl()
+{
+	passUrl();
+}
+
+</script>
 
 <?php
 include("nav.php");
 
-$string = file_get_contents("http://datasets.antwerpen.be/v4/gis/bbq.json");
+//$passedLink = $_GET["url"];
+$passedLink = "http://datasets.antwerpen.be/v4/gis/bbq.json";
+$string = file_get_contents($passedLink);
 $jsonRS = json_decode ($string,true);
 $locatie = "";
 $link = "";
+
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
